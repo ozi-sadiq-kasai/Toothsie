@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body{
-  background-color: #f5f3f4;
+  background-color: #e0e1dd;
 
 }
 
@@ -49,6 +49,7 @@ nav{
 
 .hamburger-icon{
   display: block;
+  cursor: pointer;
 }
 
 /* Hero */
@@ -58,7 +59,6 @@ nav{
 
 #image img{
   max-width: 100%;
-  width:1200px;
   max-height: 100%;
   border-radius: 10px;
 }
@@ -94,7 +94,7 @@ margin-top: 10px;
 
 /* CARD */
 .card{
-  background-color: #caf0f8;
+  background-color: steelblue;
   border-radius: 5px;
   box-shadow: 4px -1px 5px 0px rgba(237,228,228,0.75);
   height: 200px;
@@ -103,7 +103,6 @@ margin-top: 10px;
 }
 
 .card p{
-  border: 1px solid black;
   width: 100%;
   padding: 5px;
 }
@@ -143,7 +142,7 @@ list-style-type:none;
 
 
 /* MEDIA QUERIES */
-@media(max-width:768px){
+@media(max-width:414px){
   /* Nav */
   .hamburger{
     display: block;
@@ -175,14 +174,15 @@ list-style-type:none;
     align-items: center;
   }
   .tagline{
-    width:100%;
-    margin-bottom: 80px;
+    /* margin-bottom: 80px; */
     position: relative;
   }
 
   .tagline h2{
     position:absolute;
-    top: -270px;
+    top: -350px;
+    left:15px;
+    width:100%;
   }
 
   /* SUB HERO */
@@ -210,9 +210,84 @@ list-style-type:none;
     position:relative;
     top: -170px;
     left: 30px;
-    padding-bottom: 20px;
+    padding: 30px;
   }
-  .sub-hero li:nth-child(3){
-    margin-right: 150px;
+  #sub-hero li:nth-child(3){
+    margin-left:-55px;
   }
+}
+
+@media only screen and (min-width:600px)and (max-width: 767px){
+    /* Nav */
+    .hamburger{
+      display: block;
+      cursor: pointer;
+    }
+   .nav-menu{
+      position: fixed;
+      left: -100%;
+      top: 70px;
+      gap: 0;
+      flex-direction: column;
+      background-color:steelblue;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+      
+    }
+   .nav-item{
+      margin: 16px 0;
+    }
+   .nav-menu.active{
+      left: 0;
+    }
+    
+    /* Hero */
+    .flex-container-hero{
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .tagline{
+      position: relative;
+    }
+  
+    .tagline h2{
+      position:relative;
+      top: -290px;
+      left:30px;
+      width:100%;
+      color: #e0e1dd;
+    }
+  
+    /* SUB HERO */
+    #sub-hero ul{
+      display: flex;
+      flex-direction: column;
+    } 
+  
+  
+    .sub-hero-heading{
+      position:relative;
+    }
+    .sub-hero-heading h3{
+      width: 100%;
+      position: relative;
+      top: -190px;
+      text-align: center;
+    }
+    .sub-hero ul{
+      position:absolute;
+    }
+    .card{
+      width: 100%;
+      height: auto;
+      position:relative;
+      top: -170px;
+      left: 30px;
+      padding: 30px;
+    }
+    #sub-hero li:nth-child(3){
+      margin-left:-55px;
+    }
+
 }
